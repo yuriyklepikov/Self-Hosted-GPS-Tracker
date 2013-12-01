@@ -120,7 +120,7 @@ public class SelfHostedGPSTrackerService extends IntentService implements Locati
 			latestUpdate = System.currentTimeMillis();
 		}
 		
-		new SelfHostedGPSTrackerRequest().execute(urlText + "lat=" + location.getLatitude() + "&lon=" + location.getLongitude());
+		new SelfHostedGPSTrackerRequest().execute("/user"urlText + "/" + location.getLatitude() + "/" + location.getLongitude());
 	}
 
 	@Override
