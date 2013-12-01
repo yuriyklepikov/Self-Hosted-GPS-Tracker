@@ -55,11 +55,11 @@ public class SelfHostedGPSTrackerService extends IntentService implements Locati
 		pref_gps_updates = Integer.parseInt(preferences.getString("pref_gps_updates", "30")); // seconds
 		pref_max_run_time = Integer.parseInt(preferences.getString("pref_max_run_time", "24")); // hours
 		urlText = preferences.getString("URL", "");
-		if (urlText.contains("?")) {
-			urlText = urlText + "&"; 
-		} else {
-			urlText = urlText + "?";
-		}
+		//if (urlText.contains("?")) {
+		//	urlText = urlText + "&"; 
+		//} else {
+		//	urlText = urlText + "?";
+		//}
 		
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, pref_gps_updates * 1000, 1, this);
 	}
